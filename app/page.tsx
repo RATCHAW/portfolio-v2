@@ -9,13 +9,15 @@ import {
     NestJS,
     Nextjs,
     PostgreSQL,
+    Prisma,
     ReactQuery,
     Tebex,
+    TRPC,
     Vite,
     XformerlyTwitter,
 } from "@/components/ui/icons";
 import { Separator } from "@/components/ui/separator";
-import { ArrowUpRight } from "lucide-react";
+import { LinkIcon } from "lucide-react";
 
 const WHATIUSE = [
     {
@@ -100,11 +102,17 @@ export default function Home() {
                 </section>
                 <section>
                     <h2 className="h-10">What I built</h2>
-                    <a href="https://needforscript.com/" target="_blank">
-                        <div className="text-sm border rounded-2xl p-4 transition-shadow group hover:ring-2 hover:ring-primary hover:ring-offset-2 hover:ring-offset-background">
+                    <div className="flex flex-col gap-4 ">
+                        <div className="text-sm border rounded-2xl p-4 transition-shadow group ">
                             <div className="flex justify-between">
-                                <h3 className="text-sm font-bold tracking-wide">Webstore</h3>
-                                <ArrowUpRight className="group-hover:rotate-45 transtion transition " />
+                                <h3 className="text-sm tracking-wide">
+                                    <span className="font-bold">Ecommerce webstore</span>
+                                    {"  -  "}
+                                    <span className="italic">Work</span>
+                                </h3>
+                                <a href="https://needforscript.com/" target="_blank">
+                                    <LinkIcon className="hover:rotate-45 transtion transition" />
+                                </a>
                             </div>
                             <Separator className="w-full my-2" />
                             <p className="my-4 ">
@@ -124,7 +132,46 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                        <div className="text-sm border rounded-2xl p-4 transition-shadow group ">
+                            <div className="flex justify-between">
+                                <h3 className="text-sm tracking-wide">
+                                    <span className="font-bold">SideQuest</span>
+                                    {"  -  "}
+                                    <span className="italic">Side Project</span>
+                                </h3>
+                                <div className="flex gap-4">
+                                    <a href="https://github.com/RATCHAW/side-quest" target="_blank">
+                                        <GitHub className="size-6" />
+                                    </a>
+                                    <a href="https://side-quest-seven.vercel.app/" target="_blank">
+                                        <LinkIcon className="hover:rotate-45 transtion transition" />
+                                    </a>
+                                </div>
+                            </div>
+                            <Separator className="w-full my-2" />
+                            <p className="my-4 ">
+                                built with the T3 Stack. It&apos;s a platform where I&apos;ve enabled users to share,
+                                discover, and manage their &quot;Side Quests&quot; or project ideas. I&apos;ve
+                                implemented features like user authentication, allowing users to create posts with
+                                descriptions and images, bookmark interesting ideas, and view their own contributions. I
+                                also added search functionality and infinite scrolling to enhance the user experience.
+                                For strong SEO, I&apos;ve utilized Server-Side Rendering with RSC to ensure content is
+                                pre-rendered, making it easily discoverable by search engines, while hydration maintains
+                                a dynamic user experience.
+                            </p>
+                            <Separator className="w-full my-2" />
+                            <div className="flex justify-between">
+                                <h4>Built With</h4>
+                                <div className="flex flex-row-reverse gap-2">
+                                    <TRPC className="size-6" />
+                                    <Prisma className="size-6" />
+                                    <BetterAuth className="size-6" />
+                                    <ReactQuery className="size-6" />
+                                    <Nextjs className="size-6" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section>
                     <h2>What I use</h2>
