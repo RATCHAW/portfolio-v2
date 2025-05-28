@@ -1,6 +1,7 @@
 import {
     Astro,
     BetterAuth,
+    Docker,
     DrizzleORM,
     Expressjs,
     GitHub,
@@ -13,6 +14,7 @@ import {
     ReactQuery,
     Tebex,
     TRPC,
+    Turborepo,
     Vite,
     XformerlyTwitter,
 } from "@/components/ui/icons";
@@ -51,6 +53,14 @@ const WHATIUSE = [
     {
         name: "Astro",
         icon: Astro,
+    },
+    {
+        name: "Turborepo",
+        icon: Turborepo,
+    },
+    {
+        name: "Docker",
+        icon: Docker,
     },
 ];
 
@@ -128,6 +138,44 @@ export default function Home() {
                                     <DrizzleORM className="size-6" />
                                     <BetterAuth className="size-6" />
                                     <ReactQuery className="size-6" />
+                                    <Nextjs className="size-6" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="text-sm border rounded-2xl p-4 transition-shadow group ">
+                            <div className="flex justify-between">
+                                <h3 className="text-sm tracking-wide">
+                                    <span className="font-bold">AI Extractor</span>
+                                    {"  -  "}
+                                    <span className="italic">Side Project</span>
+                                </h3>
+                                <div className="flex gap-4">
+                                    <a href="https://github.com/RATCHAW/ai-extractor" target="_blank">
+                                        <GitHub className="size-6" />
+                                    </a>
+                                    <a href="#" target="_blank">
+                                        <LinkIcon className="hover:rotate-45 transtion transition" />
+                                    </a>
+                                </div>
+                            </div>
+                            <Separator className="w-full my-2" />
+                            <p className="my-4 ">
+                                A full-stack web application that automates data extraction from documents using
+                                Google&apos;s Gemini AI. Users can upload multiple file types (PDFs, images, documents)
+                                and define custom extraction fields. The platform intelligently parses documents and
+                                extracts structured data into JSON format. Features include user authentication with
+                                social login, credit-based usage system, data export functionality (CSV, JSON, Excel),
+                                and a scalable monorepo architecture with Docker containerization and CI/CD pipeline.
+                            </p>
+                            <Separator className="w-full my-2" />
+                            <div className="flex justify-between">
+                                <h4>Built With</h4>
+                                <div className="flex flex-row-reverse gap-2">
+                                    <Docker className="size-6" />
+                                    <Prisma className="size-6" />
+                                    <Turborepo className="size-6" />
+                                    <BetterAuth className="size-6" />
+                                    <Expressjs className="size-6" />
                                     <Nextjs className="size-6" />
                                 </div>
                             </div>
